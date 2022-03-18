@@ -22,7 +22,7 @@ class Word_Segment_Tag:
             tempList = [word for word in tempList if len(word) >= targetLen]
         return tempList
 
-keywords = ['食', '飲']
+keywords = ['食', '飲', '菜']
 
 def check_Wiki_API(word) -> bool:
     try:
