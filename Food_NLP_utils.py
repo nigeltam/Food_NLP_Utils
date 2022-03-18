@@ -57,7 +57,8 @@ def database_add_topic(word, articleID) -> None:
     else:
         ERROR
     """
-    print(f"database_add_topic - {word}")
+
+    print(f"database_add_topic - {word} = {check_Wiki_API(word)}")
 
 def all_in_one(articleID, plainText) -> None:
     """One shot programe to run when a new article scraped"""
@@ -71,3 +72,34 @@ def all_in_one(articleID, plainText) -> None:
 if __name__ == "__main__":
     plainText = "望住梅窩夜景，食住海鮮配啤酒簡直係享受。必試椒鹽九肚魚，口感滑捋捋，炸漿又夠鬆脆，點埋個喼汁真係食多多都無問題；避風塘炒蜆新鮮惹味。特別一提個乾炒牛河都好出色，乾身又夠鑊氣，最緊要係唔算油，牛肉份量又多，可以話係一碟出色嘅炒牛河！;、;行完山唔想食得太heavy，去呢間人氣麵包店食個包嘆杯咖啡都唔錯㗎。裝修好有外國風格，主打手工麵包，人氣自家製酸種麵包，酸種天然酵母發酵出嚟嘅麵包更有嚼勁，入面嘅合桃、杏脯同提子更添口感。提子玉桂麵包都值得一試，包身好軟熟，玉桂味突出而且唔會太甜，另外重有唔少蛋糕類質素都唔錯"
     all_in_one(1, plainText)
+    """
+    database_add_topic - 合桃 = True
+    database_add_topic - 口感 = True
+    database_add_topic - 椒鹽 = True
+    database_add_topic - 咖啡 = True
+    database_add_topic - 惹味 = False
+    database_add_topic - 質素 = False
+    database_add_topic - 份量 = False
+    database_add_topic - 人氣 = False
+    database_add_topic - 自家 = False
+    database_add_topic - heavy = False
+    database_add_topic - 玉桂 = True
+    database_add_topic - 酵母 = True
+    database_add_topic - 手工 = False
+    database_add_topic - 牛肉 = True
+    database_add_topic - 乾炒牛河 = True
+    database_add_topic - 無問題 = False
+    database_add_topic - 海鮮 = True
+    database_add_topic - 牛河 = False
+    database_add_topic - 杏脯 = False
+    database_add_topic - 麵包 = True
+    database_add_topic - 風格 = False
+    database_add_topic - 個包 = False
+    database_add_topic - 蛋糕 = True
+    database_add_topic - 啤酒 = True
+    database_add_topic - 出色 = False
+    database_add_topic - 喼汁 = True
+    database_add_topic - 夜景 = False
+    database_add_topic - 提子 = True
+    database_add_topic - 外國 = False
+    """
